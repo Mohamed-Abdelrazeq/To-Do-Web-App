@@ -19,7 +19,7 @@ body{
     margin: 80px 10%;
     border-radius: 15px;
     padding: 20px;
-    height: 80vh;
+    min-height: 80vh;
 }
 
 header{
@@ -38,7 +38,6 @@ h1{
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -55,18 +54,21 @@ label , #new-task-textfield {
 
 #new-task-textfield{
     padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
     border-radius: 10px;
-    width: 80%;
+    width: 30vw;
+    height: 3vh;
     margin: auto;
     margin-bottom: 15px;
     border: none;
+    color: #000;
 }
 
 #new-task-textfield:focus{
     padding: 10px;
     border-radius: 10px;
     outline: none;
-
 }
 
 #add-task-btn{
@@ -82,16 +84,16 @@ label , #new-task-textfield {
 
 .tasks{
     margin: 40px 10%;
-    display: flex;
+    display: block;
     
 }
 
 .task{
+    display: flex;
     background-color: #464646;
     border-radius: 5px;
-    padding: 10px 20px;
-    width: 100%;
-    display: flex;
+    padding: 25px 20px;
+    margin-top: 10px;
     justify-content: space-between;
 }
 
