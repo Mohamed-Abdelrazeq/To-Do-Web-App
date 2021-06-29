@@ -5,6 +5,7 @@ var btn = document.getElementById("add-task-btn");
 btn.addEventListener("click",addTask);
 
 function addTask(e){
+    if(textfield.value != ""){
     //create element
     var li = document.createElement("div");
     //add classes to it
@@ -22,4 +23,11 @@ function addTask(e){
 
     //append it to list of items
     tasks[0].appendChild(li);
+
+    //clear textfield
+    textfield.value = "";
+    }else{
+        alert('Please Add The Task');
+    }
+
 }
