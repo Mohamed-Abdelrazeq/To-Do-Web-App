@@ -1,8 +1,28 @@
 var textfield = document.getElementById("new-task-textfield");
-var tasks = document.getElementsByClassName("tasks");
+var tasks = document.getElementById("tasks");
 var btn = document.getElementById("add-task-btn");
+var emptyImage = document.getElementById("empty-image");
 
+tasks.addEventListener("click",deleteTask);
 btn.addEventListener("click",addTask);
+
+function imageChecker(){
+    if(tasks.children.length == 1){
+        emptyImage.style.display = "block";
+    }else{
+        emptyImage.style.display = "none";
+    }
+}
+
+function deleteTask(e){
+    if(e.target.className == "fa fa-close"){
+        if(confirm("Are You Sure?")){
+            var task = e.target.parentElement;
+            tasks.removeChild(task);
+        }
+    }
+    imageChecker();
+}
 
 function addTask(e){
     if(textfield.value != ""){
@@ -22,12 +42,16 @@ function addTask(e){
     li.appendChild(deleteIcon);
 
     //append it to list of items
-    tasks[0].appendChild(li);
+    tasks.appendChild(li);
 
     //clear textfield
     textfield.value = "";
     }else{
         alert('Please Add The Task');
     }
+    imageChecker();
+}
 
+function pDebug(){
+    console.log("working");
 }

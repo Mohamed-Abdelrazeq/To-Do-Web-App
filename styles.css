@@ -22,6 +22,14 @@ body{
     min-height: 80vh;
 }
 
+.main-panal img{
+    width:  30vw;
+    margin: auto;
+    margin-top: 10vh;
+    padding-top: 0vh;
+    display: block;
+}
+
 header{
     background-color: #2e2e2e;
     margin: 40px 0;
