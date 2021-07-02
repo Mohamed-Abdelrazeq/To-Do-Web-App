@@ -76,7 +76,7 @@ label , #new-task-textfield {
 #new-task-textfield:focus{
     padding: 10px;
     border-radius: 10px;
-    outline: none;
+    outline: auto;
 }
 
 #add-task-btn{
@@ -88,6 +88,12 @@ label , #new-task-textfield {
     border-radius: 10px;
     background-color: aliceblue; 
     margin: auto;
+}
+
+#add-task-btn:hover{
+    background-color: rgb(187, 189, 190); 
+    position: relative;
+    top: -2px;
 }
 
 .tasks{
@@ -105,3 +111,9 @@ label , #new-task-textfield {
     justify-content: space-between;
 }
 
+@media(max-width: 600px) {
+    body{
+        background-attachment: scroll;
+    }
+    
+  }
